@@ -1,0 +1,18 @@
+{% extends "pagelayout.html.twig" %}
+{% block content %}
+
+<div class="col-md-10 col-md-offset-1">
+    <h2 class="heading">{{ ez_content_name(content) }}</h2>
+    <div class="dog-breed-image-full">
+        {{ ez_render_field(content, 'photo', {
+            'parameters': {
+                'alias': 'dog_breed_full'
+            }
+        }) }}
+    </div>
+    <div class="attribute-description">
+        <p>{{ ez_render_field(content, 'description') }}</p>
+    </div>
+</div>
+
+{% endblock %}

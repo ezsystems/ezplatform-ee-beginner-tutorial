@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+{% stylesheets 'assets/css/*' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+<link href="https://fonts.googleapis.com/css?family=Pattaya|Roboto" rel="stylesheet">
+
+<title>It's a Dog's World!</title>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron text-right">
+        <h1>It's a Dog's World</h1>
+    </div>
+
+    <div class="navbar navbar-default" id="main-navbar">
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/All-Articles">Articles</a></li>
+                <li><a href="/Dog-Breed-Catalog">Dog breeds</a></li>
+                <li><a href="/All-Tips">Tips</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row main">
+        {% block content %} {% endblock %}
+    </div>
+</div>
+
+<footer class="container text-muted text-center">
+    <div>
+        <small>This is a work of fiction. Any resemblance to actual dogs or ibexes, or actual events is purely coincidental</small>
+    </div>
+</footer>
+
+</body>
+</html>

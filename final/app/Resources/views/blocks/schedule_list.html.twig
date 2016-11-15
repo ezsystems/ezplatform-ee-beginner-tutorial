@@ -1,0 +1,17 @@
+{% spaceless %}
+<div class="other-articles-block">
+    <h4 class="heading">Other Articles</h4>
+    <div data-studio-slots-container>
+        {% for item in items %}
+            <div data-studio-slot>
+                {% if item is defined %}
+                    {{ render(controller('ez_content:viewLocation', {
+                        'locationId': item,
+                        'viewType': 'list'
+                    })) }}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endspaceless %}

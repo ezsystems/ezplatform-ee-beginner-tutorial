@@ -1,0 +1,6 @@
+blocks:
+    random:
+        views:
+            random:
+                template: AppBundle:blocks:random.html.twig
+                name: Random Content Block View
