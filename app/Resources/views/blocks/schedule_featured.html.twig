@@ -1,0 +1,33 @@
+{% spaceless %}
+    <div class="row schedule-layout schedule-layout--grid">
+        <div class="featured-articles-block">
+            <h2 class="heading">{{ 'Featured Articles'|trans }}</h2>
+            <div data-studio-slots-container>
+                <div class="col-md-4 featured-article-container" data-studio-slot>
+                    {% if items[0] is defined %}
+                        {{ render(controller('ez_content:viewLocation', {
+                            'locationId': items[0],
+                            'viewType': 'featured'
+                        })) }}
+                    {% endif %}
+                </div>
+                <div class="col-md-4 featured-article-container" data-studio-slot>
+                    {% if items[1] is defined %}
+                        {{ render(controller('ez_content:viewLocation', {
+                            'locationId': items[1],
+                            'viewType': 'featured'
+                        })) }}
+                    {% endif %}
+                </div>
+                <div class="col-md-4 featured-article-container" data-studio-slot>
+                    {% if items[2] is defined %}
+                        {{ render(controller('ez_content:viewLocation', {
+                            'locationId': items[2],
+                            'viewType': 'featured'
+                        })) }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endspaceless %}

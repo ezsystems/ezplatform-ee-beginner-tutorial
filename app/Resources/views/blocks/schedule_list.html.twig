@@ -1,0 +1,32 @@
+{% spaceless %}
+    <div class="other-articles-block">
+        <h4 class="heading">{{ 'Other Articles'|trans }}</h4>
+        <div data-studio-slots-container>
+            <div data-studio-slot>
+                {% if items[0] is defined %}
+                    {{ render(controller('ez_content:viewLocation', {
+                        'locationId': items[0],
+                        'viewType': 'list'
+                    })) }}
+                {% endif %}
+            </div>
+            </div>
+            <div data-studio-slot>
+                {% if items[1] is defined %}
+                    {{ render(controller('ez_content:viewLocation', {
+                        'locationId': items[1],
+                        'viewType': 'list'
+                    })) }}
+                {% endif %}
+            </div>
+            <div data-studio-slot>
+                {% if items[2] is defined %}
+                    {{ render(controller('ez_content:viewLocation', {
+                        'locationId': items[2],
+                        'viewType': 'list'
+                    })) }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endspaceless %}
