@@ -34,3 +34,13 @@ ezpublish:
                         template: "full/landing_page.html.twig"
                         match:
                             Identifier\ContentType: "landing_page"
+                featured:
+                    article:
+                        template: "featured/article.html.twig"
+                        match:
+                            Identifier\ContentType: "article"
+                list:
+                    article:
+                        template: "list/article.html.twig"
+                        match:
+                            Identifier\ContentType: "article"

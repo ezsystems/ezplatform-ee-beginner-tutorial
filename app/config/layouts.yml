@@ -11,3 +11,17 @@ ez_systems_landing_page_field_type:
                     name: First zone
                 second:
                     name: Second zone
+    blocks:
+        contentlist:
+            views:
+                contentList:
+                    template: blocks/contentlist.html.twig
+                    name: Content List
+        schedule:
+            views:
+                schedule_featured:
+                    template: blocks/schedule_featured.html.twig
+                    name: Featured Schedule Block
+                schedule_list:
+                    template: blocks/schedule_list.html.twig
+                    name: List Schedule Block
