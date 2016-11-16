@@ -142,3 +142,82 @@ footer div {
     padding: 15px;
     margin-top: 30px;
 }
+
+/* Landing Page */
+@media only screen and (min-width: 992px) {
+    aside > div {
+        padding-left: 45px;
+    }
+}
+
+/* Content list block */
+.content-list-item {
+    clear: left;
+    min-height: 90px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+.content-list h5 {
+    font-size: 1.3em;
+}
+
+.content-list-item-image {
+    float: left;
+    margin-right: 10px;
+}
+
+/* Featured articles schedule block */
+.featured-article-container {
+    background-size: cover;
+    padding: 0;
+}
+
+.featured-article {
+    height: 200px;
+    padding: 0;
+    background-repeat: no-repeat;
+}
+
+.featured-article-link:link,
+.featured-article-link:visited {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+    background-color: rgba(255,255,255,.8);
+    color: #000;
+    font-size: 1.1em;
+    padding: 7px;
+}
+
+.featured-article-link:hover,
+.featured-article-link:focus {
+    color: #654d31;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+/* Other articles schedule block */
+.other-articles-block {
+    padding-top: 20px;
+}
+
+.other-article {
+    clear: left;
+    padding-top: 5px;
+}
+
+.other-article-image {
+    float: left;
+    margin-right: 18px;
+}
+
+.other-article h5 {
+    padding-top: 25px;
+    font-size: 1.2em;
+}
+
+.other-article-link:link,
+.other-article-link:visited {
+    font-size: 1.2em;
+}
