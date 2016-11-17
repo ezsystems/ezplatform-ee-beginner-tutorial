@@ -1,0 +1,27 @@
+ez_systems_landing_page_field_type:
+    layouts:
+        sidebar:
+            identifier: sidebar
+            name: Right sidebar
+            description: Main section with sidebar on the right
+            thumbnail: assets/images/layouts/sidebar.png
+            template: layouts/sidebar.html.twig
+            zones:
+                first:
+                    name: First zone
+                second:
+                    name: Second zone
+    blocks:
+        contentlist:
+            views:
+                contentList:
+                    template: blocks/contentlist.html.twig
+                    name: Content List
+        schedule:
+            views:
+                schedule_featured:
+                    template: blocks/schedule_featured.html.twig
+                    name: Featured Schedule Block
+                schedule_list:
+                    template: blocks/schedule_list.html.twig
+                    name: List Schedule Block
