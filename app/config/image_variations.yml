@@ -20,8 +20,3 @@ ezpublish:
                     reference: null
                     filters:
                         - {name: geometry/scaleheightdownonly, params: [200]}
-                other_article:
-                    reference: null
-                    filters:
-                        - {name: geometry/scaleheightdownonly, params: [120]}
-                        - {name: geometry/crop, params: [120, 100, 0, 0]}
