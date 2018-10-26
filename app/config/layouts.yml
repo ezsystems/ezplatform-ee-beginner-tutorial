@@ -1,4 +1,4 @@
-ez_systems_landing_page_field_type:
+ezplatform_page_fieldtype:
     layouts:
         sidebar:
             identifier: sidebar
