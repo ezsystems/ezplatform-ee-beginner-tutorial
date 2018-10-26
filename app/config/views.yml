@@ -39,8 +39,3 @@ ezpublish:
                         template: "featured/article.html.twig"
                         match:
                             Identifier\ContentType: "article"
-                list:
-                    article:
-                        template: "list/article.html.twig"
-                        match:
-                            Identifier\ContentType: "article"
