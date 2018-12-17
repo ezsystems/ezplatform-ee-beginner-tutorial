@@ -2,7 +2,6 @@
 
 namespace AppBundle\Controller;
 
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\TwigBundle\TwigEngine;
 use eZ\Publish\Core\QueryType\QueryTypeRegistry;
 use eZ\Publish\API\Repository\SearchService;
