@@ -5,3 +5,8 @@ services:
             - '@templating'
             - '@ezpublish.api.service.search'
             - '@ezpublish.query_type.registry'
+
+    app.query_type:
+        class: AppBundle\QueryType\MenuQueryType
+        tags:
+            - {name: ezpublish.query_type}
