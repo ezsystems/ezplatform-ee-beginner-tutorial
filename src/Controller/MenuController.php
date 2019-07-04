@@ -1,35 +1,34 @@
 <?php
 
-namespace AppBundle\Controller;
+namespace App\Controller;
 
-use Symfony\Bundle\TwigBundle\TwigEngine;
-use eZ\Publish\Core\QueryType\QueryTypeRegistry;
+use Symfony\Component\Templating\EngineInterface;
 use eZ\Publish\API\Repository\SearchService;
+use App\QueryType\MenuQueryType;
 
 class MenuController
 {
     /** @var \Symfony\Bundle\TwigBundle\TwigEngine */
     protected $templating;
-
     /** @var \eZ\Publish\API\Repository\SearchService */
     protected $searchService;
-
-    /** @var \AppBundle\QueryType\MenuQueryType */
+    /** @var \App\QueryType\MenuQueryType */
     protected $menuQueryType;
 
     /**
      * @param \Symfony\Bundle\TwigBundle\TwigEngine $templating
      * @param \eZ\Publish\API\Repository\SearchService $searchService
-     * @param \eZ\Publish\Core\QueryType\QueryTypeRegistry $queryTypeRegistry
+     * @param \App\QueryType\MenuQueryType $menuQueryType
      */
     public function __construct(
-        TwigEngine $templating,
+        EngineInterface $templating,
         SearchService $searchService,
-        QueryTypeRegistry $queryTypeRegistry
-    ) {
+        MenuQueryType $menuQueryType
+    )
+    {
         $this->templating = $templating;
         $this->searchService = $searchService;
-        $this->menuQueryType = $queryTypeRegistry->getQueryType('AppBundle:Menu');
+        $this->menuQueryType = $menuQueryType;
     }
 
     /**
@@ -42,12 +41,10 @@ class MenuController
     public function getMenuItemsAction($template)
     {
         $locationSearchResults = $this->searchService->findLocations($this->menuQueryType->getQuery());
-
         $menuItems = [];
         foreach ($locationSearchResults->searchHits as $hit) {
             $menuItems[] = $hit->valueObject;
         }
-
         return $this->templating->renderResponse(
             $template, [
                 'menuItems' => $menuItems,
