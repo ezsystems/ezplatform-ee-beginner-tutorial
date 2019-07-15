@@ -11,3 +11,14 @@ ezplatform_page_fieldtype:
                     name: First zone
                 second:
                     name: Second zone
+    blocks:
+        contentlist:
+            views:
+                contentList:
+                    template: blocks/contentlist/default.html.twig
+                    name: Content List
+        schedule:
+            views:
+                featured:
+                    template: blocks/schedule/featured.html.twig
+                    name: Featured Schedule Block
