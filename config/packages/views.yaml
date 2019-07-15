@@ -1,7 +1,7 @@
 ezpublish:
     system:
-        site_group:
-            pagelayout: "pagelayout.html.twig"
+        site:
+            pagelayout: pagelayout.html.twig
             user:
                 layout: "pagelayout.html.twig"
 

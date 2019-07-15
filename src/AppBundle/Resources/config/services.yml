@@ -1,7 +1,0 @@
-services:
-    app.controller.menu:
-        class: AppBundle\Controller\MenuController
-        arguments:
-            - '@templating'
-            - '@ezpublish.api.service.search'
-            - '@ezpublish.query_type.registry'

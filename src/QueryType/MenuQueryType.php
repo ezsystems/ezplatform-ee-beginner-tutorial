@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\QueryType;
+namespace App\QueryType;
 
 use eZ\Publish\Core\QueryType\QueryType;
 use eZ\Publish\API\Repository\Values\Content\Query;
@@ -16,22 +16,18 @@ class MenuQueryType implements QueryType
             new Query\Criterion\Location\Depth(Query\Criterion\Operator::LTE, 2),
             new Query\Criterion\Subtree('/1/2/'),
         ]);
-
         $options = [
             'filter' => $criteria,
             'sortClauses' => [
                 new SortClause\Location\Priority(LocationQuery::SORT_ASC),
             ],
         ];
-
         return new LocationQuery($options);
     }
-
     public static function getName()
     {
-        return 'AppBundle:Menu';
+        return 'Menu';
     }
-
     public function getSupportedParameters()
     {
         return [];

@@ -20,7 +20,7 @@ a:focus {
 
 /* Header and footer */
 .jumbotron {
-    background-image: url('/assets/images/header.jpg');
+    background-image: url('../images/header.jpg');
     background-repeat: no-repeat;
     background-position: 50% 30%;
     background-size: cover;
