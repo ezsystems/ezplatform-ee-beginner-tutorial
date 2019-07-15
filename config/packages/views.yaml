@@ -30,3 +30,7 @@ ezpublish:
                                 parameters:
                                     parentLocationId: "@=location.id"
                                 assign_results_to: "items"
+                    landing_page:
+                        template: full/landing_page.html.twig
+                        match:
+                            Identifier\ContentType: landing_page
