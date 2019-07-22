@@ -5,6 +5,9 @@ ezpublish:
             user:
                 layout: "pagelayout.html.twig"
 
+            field_templates:
+                - { template: "form_field.html.twig", priority: 30 }
+
             content_view:
                 full:
                     dog_breed:
