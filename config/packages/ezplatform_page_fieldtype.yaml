@@ -40,3 +40,8 @@ ezplatform_page_fieldtype:
                             options:
                                 pattern: '/[0-9]+/'
                             message: Choose a Content item
+        form:
+            views:
+                newsletter:
+                    template: blocks/form/newsletter.html.twig
+                    name: Newsletter Form View
