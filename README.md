@@ -12,4 +12,4 @@ Steps of the tutorial are described in [the official documentation](https://doc.
 
 ## Files in the repository
 
-Files in this repository are organized in branches. Each branch contains the files used in respective steps of the tutorial, with `master` corresponding to the final Step 4.
+Files in this repository are organized in branches. Each branch contains the files used in respective steps of the tutorial, with `v2-master` corresponding to the final Step 5.
