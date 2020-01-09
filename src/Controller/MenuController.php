@@ -2,9 +2,10 @@
 
 namespace App\Controller;
 
-use Symfony\Component\Templating\EngineInterface;
+use Twig\Environment;
 use eZ\Publish\API\Repository\SearchService;
 use App\QueryType\MenuQueryType;
+use Symfony\Component\HttpFoundation\Response;
 
 class MenuController
 {
@@ -21,7 +22,7 @@ class MenuController
      * @param \App\QueryType\MenuQueryType $menuQueryType
      */
     public function __construct(
-        EngineInterface $templating,
+        Environment $templating,
         SearchService $searchService,
         MenuQueryType $menuQueryType
     )
@@ -45,10 +46,14 @@ class MenuController
         foreach ($locationSearchResults->searchHits as $hit) {
             $menuItems[] = $hit->valueObject;
         }
-        return $this->templating->renderResponse(
+        $content = $this->templating->render(
             $template, [
                 'menuItems' => $menuItems,
             ]
         );
+        $response = new Response();
+        $response->setContent($content);
+        
+        return $response;
     }
 }
