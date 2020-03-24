@@ -13,3 +13,8 @@ Steps of the tutorial are described in [the official documentation](https://doc.
 ## Files in the repository
 
 Files in this repository are organized in branches. Each branch contains the files used in respective steps of the tutorial, with `master` corresponding to the final Step 4.
+
+# Upgrading from Landing Page to Page Builder
+
+In eZ Platform 2.2, the Landing Page was replaced with Page Builder. When upgrading to eZ Platform 2.2, Landing page layouts and blocks will need to be migrated to the new Page builder.
+In this repo, there is a branch named `upgraded_to_2.2`, where the source code for sidebar layout and the Random block is updated to be compatible with the new Page Builder.
