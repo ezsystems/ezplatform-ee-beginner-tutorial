@@ -1,4 +1,4 @@
-ez_systems_landing_page_field_type:
+ezplatform_page_fieldtype:
     layouts:
         sidebar:
             identifier: sidebar
@@ -17,11 +17,12 @@ ez_systems_landing_page_field_type:
                 contentList:
                     template: blocks/contentlist.html.twig
                     name: Content List
-        schedule:
-            views:
-                schedule_featured:
-                    template: blocks/schedule_featured.html.twig
-                    name: Featured Schedule Block
-                schedule_list:
-                    template: blocks/schedule_list.html.twig
-                    name: List Schedule Block
+#       This block is not supported by PageBuilder in v2.2
+#        schedule:
+#            views:
+#                sqchedule_featured:
+#                    template: blocks/schedule_featured.html.twig
+#                    name: Featured Schedule Block
+#                schedule_list:
+#                    template: blocks/schedule_list.html.twig
+#                    name: List Schedule Block

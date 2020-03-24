@@ -1,16 +1,20 @@
 services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
     app.controller.menu:
         class: AppBundle\Controller\MenuController
         arguments:
             - '@templating'
             - '@ezpublish.api.service.search'
             - '@ezpublish.query_type.registry'
+        public: true
             
-    app.block.random:
-        class: AppBundle\Block\RandomBlock
-        arguments:
-            - '@ezpublish.api.service.location'
-            - '@ezpublish.api.service.content'
-            - '@ezpublish.api.service.search'
+    AppBundle\Block\Event\Listener\RandomBlockListener: ~
+
+    app.block.random.converter:
+        class: EzSystems\EzPlatformPageMigration\Converter\AttributeConverter\DefaultConverter
         tags:
-            - { name: landing_page_field_type.block_type, alias: random }
+            - { name: ezplatform.fieldtype.ezlandingpage.migration.attribute.converter, block_type: random }

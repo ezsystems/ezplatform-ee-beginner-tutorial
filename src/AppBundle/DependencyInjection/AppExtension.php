@@ -25,7 +25,7 @@ class AppExtension extends Extension implements PrependExtensionInterface
     {
         $configFile = __DIR__ . '/../Resources/config/blocks.yml';
         $config = Yaml::parse(file_get_contents($configFile));
-        $container->prependExtensionConfig('ez_systems_landing_page_field_type', $config);
+        $container->prependExtensionConfig('ezplatform_page_fieldtype', $config);
         $container->addResource(new FileResource($configFile));
     }
 }

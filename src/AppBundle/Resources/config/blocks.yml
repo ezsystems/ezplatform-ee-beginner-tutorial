@@ -1,6 +1,19 @@
 blocks:
     random:
+        name: Random
+        category: default
+        thumbnail: assets/images/layouts/sidebar.png
+        # read https://doc.ezplatform.com/en/latest/guide/extending/extending_page/#block-modal-template
+        #configuration_template: blocks/random_config.html.twig
         views:
             random:
-                template: AppBundle:blocks:random.html.twig
+                template:  AppBundle:blocks:random.html.twig
+                #template: blocks/random.html.twig
                 name: Random Content Block View
+        attributes:
+            parentContentId:
+                type: embed
+                name: Parent Location ID
+                validators:
+                    not_blank:
+                        message: Please provide parent node
