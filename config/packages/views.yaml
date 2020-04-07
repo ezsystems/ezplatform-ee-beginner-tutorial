@@ -6,7 +6,7 @@ ezpublish:
                 layout: "pagelayout.html.twig"
 
             field_templates:
-                - { template: "form_field.html.twig", priority: 30 }
+                - { template: "fields/form_field.html.twig", priority: 30 }
 
             content_view:
                 full:
@@ -29,9 +29,9 @@ ezpublish:
                             Identifier\ContentType: "folder"
                         params:
                             query:
-                                query_type: "LocationChildren"
+                                query_type: "Children"
                                 parameters:
-                                    parentLocationId: "@=location.id"
+                                    content: "@=content"
                                 assign_results_to: "items"
                     landing_page:
                         template: full/landing_page.html.twig
