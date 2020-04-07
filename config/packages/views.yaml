@@ -26,7 +26,7 @@ ezpublish:
                             Identifier\ContentType: "folder"
                         params:
                             query:
-                                query_type: "LocationChildren"
+                                query_type: "Children"
                                 parameters:
-                                    parentLocationId: "@=location.id"
+                                    content: "@=content"
                                 assign_results_to: "items"
